@@ -1,33 +1,36 @@
-# Setting repositories in Azure DevOps & Interacting it with Git
+# Setting up Project environment in Azure DevOps & interacting with its repositories
 
-## What is Azure Devops? 
+## 1) Setting up Project environment in Azure DevOps
+
+### What is Azure Devops? 
 
 Azure DevOps is a Software as a service (SaaS) platform from Microsoft that provides an end-to-end DevOps toolchain for developing and deploying software.  It also integrates with most leading tools on the market and is a great option for orchestrating a DevOps toolchain. [Read More](https://docs.microsoft.com/en-us/azure/devops/user-guide/what-is-azure-devops?view=azure-devops)
 
-> ## STEP 1: CREATING AZURE DEVOPS ACCOUNT
+> ### **STEP 1: CREATING AZURE DEVOPS ACCOUNT**
 > 
-> - Login at Azure Devops from https://dev.azure.com/
-> - Click on **START FREE** to login from your existing Microsoft Account
-> ![](images/1.jpg)
-> 
->   OR
-> 
-> - Click on **Start free with GitHub** to login from existing github account
-> ![](images/2.jpg)
-
-
-
-## What is Organization in Azure DevOps?
-
-Organization is just like setting up a new company. Use an organization to connect groups of related projects, and help to scale up your enterprise.
-
-> ## STEP 2: SETTING-UP ORGANIZATION
-> 
-> 1. Sign into [Azure DevOps](https://dev.azure.com/)
+> - Signup at Azure Devops from https://dev.azure.com/
+> - Select **START FREE** to login from your existing Microsoft Account OR  **Start free with GitHub** to login from existing github account
+>
+--------------------
+> ### **STEP 2: SETTING-UP AN ORGANIZATION** 
+>
+>### What is Organization in Azure DevOps?
+>
+>Organization is logical grouping of related projects, and help to scale up your enterprise.
+>
+>
+> -> There are 2 ways of creating an organization in Azure DevOps
+>  
+> 1. While signing-up you will be asked to create new organization
+> ![](images/31.png)
+>
+>  OR
+>
+> 1. If you already have organization, Sign into [Azure DevOps](https://dev.azure.com/)
 >
 > 2. Select **New Organization**
 > 
->![](images/3.png)
+>![](images/32.png)
 >
 > 3. Confirm information/name of your organization, and thn select **Countinue**
 >
@@ -38,130 +41,175 @@ Organization is just like setting up a new company. Use an organization to conne
 
 
 
-## What is Project in an Azure Organization?
+-------------------------
 
-A project provides a repository for source code and a place for users to plan, track progress, and collaborate on building software solutions. A project represents a fundamental container where data is stored when added to Azure DevOps.
 
-> ## STEP 3: CREATING PROJECT
+> ### **STEP 3: CREATING PROJECT IN ORGANIZATION**
+>
+>### What is Project in an Azure Organization?
+>
+>A project provides a repository for source code and a place for users to plan, track progress, and collaborate on building software solutions. A project represents a fundamental container where data is stored when added to Azure DevOps.
+>
+> -> We are making project for a bank (*BBBank*)
 >
 >  1. Give a logical name to your project and click **Create Project** 
 >
 > ![](images/5.png)
 >
-> 2. After creating the project you manage all project related tasks from left side pannel 
+------------------
+>
+> ### **STEP 4: CREATING REPOSITORIES IN A PROJECT**
+>Azure Repos is a set of version control tools that you can use to manage your code.
+>
+>  -> In this project we will 2 repositories
 > 
-> ![](images/6.png)
+> - One for UI
+> - One for API Code
 >
-
-> ## STEP 4: INSTALLING GIT ON WINDOWS
-> 1. Navigate to the latest [Git for Windows installer](https://gitforwindows.org/) and download the latest version.
+> Let's create one of these as a part of this lab
+>Click on **New Repositories** from the Repos tab
 >
->2. Once the installer has started, follow the instructions as provided in the Git >Setup wizard screen until the installation is complete.
+> ![](images/33.png)
 >
->3. Open the windows command prompt (or Git Bash if you selected not to use the standard Git Windows Command Prompt during the Git installation).
->
-> 4. Type git version to verify Git was installed.
->
-> NOTE: For information to install git on different OS, [click here](https://github.com/git-guides/install-git#:~:text=To%20install%20Git%2C%20run%20the,installation%20by%20typing%3A%20git%20version%20.)
-
-
-
-## What are Repositories?
-
-Azure Repos is a set of version control tools that you can use to manage your code.
-
-> ## STEP 5: CREATING REPOSITORIES IN AZURE DEVOPS
->
-> 1. Click **Repos** from left side of your Azure panel
->
-> ![](images/7.png)
->
->2. Now the next step is to Clone repostory to editor or Import Existing Repository
-> > There are 3 ways to start working on your repos
->> - Copy the Link and Paste it into your code editor 
->> OR
->> Directly add existing repos to your code editor from this tab to start working on this repository
->> ![](images/8.png)
->>OR
->> - Copy this and Push and existing repository from Git CLI
->> ![](images/9.png)
->>OR
->>- Copy link from existing GitHub repository. Import directly from there
->> ![](images/11.png)
-
-## What is Clone? 
-
-Cloning a repo downloads all commits and branches in the repo. Cloning sets up a named relationship with the existing repo you cloned
-
-> ## STEP 6: CLONE REPOSITORY FROM AZURE TO CODE EDITOR (VSCODE) 
+>We will name this repo **BBBank_UI** and click **Create**
 > 
->1. You can clone your blank repos either by following previous step 
->OR
->Start using existing repository and Click on **CLONE** from upper right corner 
+> ![](images/34.png)
 >
-> ![](images/13.png)
+> -> WE HAVE SUCCESSFULLY CREATED A PROJECT ENVIORNMENT!
 >
->2. Select the repository location where the code will be saved in your local PC
->
-> ![](images/14.png)
->
->3. It will ask you to Enter your Microsoft account credentials so Code Editor will have access to interact with Azure Devops
->
->![](images/15.png)
->
->4. Now you are ready to make changes in the code!
->
->![](images/icons.gif)
+> -> NOW WE WILL MOVE ON TO SECOND PART OF OUR LAB
+--------------------------------------
+-------------------------------------
 
+## 2) INTERACTING WITH REPOSITORIES
 
->## STEP 7: CREATING LOCAL BRANCH
+> ### **STEP 1: Git and Installing git**
+>
+>Git is a free and open source distributed version control system. [Learn more](https://www.nobledesktop.com/learn/git/what-is-git)
+>
+> - Navigate to the latest [Git for Windows installer](https://gitforwindows.org/) and download the latest version.
+-----------------
+> ### **STEP 2: Cloning Git repository in from CLI**
+>
+> 1. First we will create folder in local computer for the project
+> 2. We will create another sub-folder for UI project (*BBBank_UI*)
+> ![](images/35.png)
+>
+> 3. Right Click in the folder and open the PowerShell Terminal
+>![](images/36.png)  
+> 
+> 4. To clone our repository we will first copy the **Clone URL** from Azure Devops Portal
+>![](images/37.png)
+>
+>5. Add copied URL after **git clone** and Run this command in the terminal
+>
+> ```bash
+> git clone https://Patters-Tech@dev.azure.com/Patters-Tech/BBBank/_git/BBBank_UI
+>  ```
+------------
+> ### **STEP 3: Create a Local branch**
+>
 > Branches allow you to develop features, fix bugs, or safely experiment with new ideas in a contained area of your repository. It is good practice to create a branch and start working on it rather than making changes to Main branch.
-> There are 2 ways to create Local branch:
->> 1. In your Azure devOps repository Click on Main section and create new branch
->>
->> ![](images/16.png)
->>
->>OR
->>
->> 2. Directly go to your code editor to creat new branch
->>
->> ![](images/17.png)
+>
+> -> To create a local branch run this command in Code Editor terminal
+>
+>```powershell
+> git checkout -b ＜new-branch＞
+>```
+> -> New branch is successfully created 
+>![](images/38.png)
 
-> ## STEP 8: STAGGING AND COMMITING
-> 
+----------------
+
+> ### **STEP 4: Open VSCODE(Code Editor) and create HTML file**
+>
+>1. Right click and create file with the name *index.html*
+>![](images/39.png)
+>
+>2. Now we will create a sample page by putting this HTML code.
+>```html
+><h1>This is my first page</h1>
+>```
+>.
+----------------------
+
+> ### **STEP 5: Staging Changes** 
 >To stage a file is simply to prepare it finely for a commit. Git, with its index allows you to commit only certain parts of the changes you've done since the last commit.
-> 1. First we **SAVE** whatever the data we have changed
-> 2. We **Stage** all the changes by right clicking on **Changes** and select **Stage All Changes**
-> 
->![](images/18.png)
 >
->3. To commit all Staged,from source control panel click on the upper 3 dots **...**, select **Commit** and then **Commit Staged**. Write a commit message and press Enter.
+> -> Run this command in terminal to stage all changes
 >
-> ![](images/19.png)
+> ```powershell
+> git add .
+>```
+>.
+----------------
+>### **STEP 6: Check the Git Status**
+> To check the status we will use this command
 >
-> This will directly Push and Pull to the Local branch you created in Azure Devops.
+>```powershell
+>git status
+>```
+> The current status of our folder is showing that changes are **Stagged** but not **Commited** yet
 >
-> 4. You can see your changes in local branch in DevOps Portal.
+>![](images/40.png)
+-------------------
+>### **STEP 7: Commiting Changes**
+> A commit, or "revision", is an individual change to a file (or set of files). 
+>
+>To commit our chnages we will use
+>
+>```powershell
+>git commit -m firstcommit
+>```
+>here *-m* shows the message showing what we have commited
 
-> ## STEP 9: PUSH AND PULL REQUEST
-> 1. Select the branch you have created from azure portal
+------------------------------
+>### **STEP 8: Pushing Changes to Server**
 >
-> ![](images/20.png)
+>The git push command allows you to send (or push) the commits from your local branch in your local Git repository to the remote repository.
 >
->2. Create Pull request
+>To push to local server we use this command in terminal
 >
->![](images/21.png)
+>```powershell
+>git push --all
+>```
+>-> Now if you goto your Azure DevOps portal you will see that all your changes are pushed into server successfully.
+>And you can see our newly created index.html file in local branch *(new-branch)* in Azure Devops repository.
 >
->3. Select from origion and destination branches. Write the title and description.
->
->![](images/22.png)
->
->4. You can assign a reviewer, apply tags and assign work item from Azure boards. After completing the task click **Create**
->
->![](images/23.png)
->
-> 5. **Approve** the changes you have made and Click **Complete**
->
->![](images/24.png)
->
-> This will commit all Your changes to Main branch and will delete the local branch. 
+> ![](images/41.png)
+ -------------------------------
+
+ >### **NOTE: :warning: ERROR WHILE PUSHING** 
+ > Those who have recently installed git may face some unforeseen error.
+ > Possible cause of it is that your **username** and **email-id** is not configured in git. 
+ >
+ > If you face this error use commands below
+ > 
+ >```powershell
+ > git config --global user.name "username"
+ > git config --golbal user.email "your email id"
+ >```
+ >To check the configuration run
+ >
+ >```powershell
+ >git config --golbal --list
+ >```
+ >.
+----------------------------
+ >### **STEP 9: Pull from repository**
+ >Pull requests let you tell others about changes you've pushed to a branch in a repository on GitHub. Once a pull request is opened, you can discuss and review the potential changes with collaborators and add follow-up commits before your changes are merged into the base branch.
+ >
+ >To pull from the repository in which changes have been made, run this command
+ >
+ >```powershell
+ >git pull --all
+ >```
+ >.
+
+----------------------
+------------------------
+Read more about [git commads](https://git-scm.com/docs)
+
+
+
+If you want to start using [Visual Studio Blog](https://devblogs.microsoft.com/visualstudio/)

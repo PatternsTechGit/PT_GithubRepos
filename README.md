@@ -127,9 +127,11 @@ Azure DevOps is a Software as a service (SaaS) platform from Microsoft that prov
 ><h1>This is my first page</h1>
 >```
 >3. Save the file and you can see *index.html* file in folder where you created the repository.
+>![](images/43.png)
+
 ----------------------
 
-> ### **STEP 5: Staging Changes** 
+> ### **STEP 5: Stage Changes** 
 >To stage a file is simply to prepare it finally for a commit. Git, with its index allows you to commit only certain parts of the changes you've done since the last commit.
 >
 > :arrow_right: Run this command in terminal to *Stage all Changes*
@@ -149,19 +151,19 @@ Azure DevOps is a Software as a service (SaaS) platform from Microsoft that prov
 >
 >![](images/40.png)
 >
-> You can see that new file is added but not commited yet.
+> 
 -------------------
 >### **STEP 7: Commiting Changes**
 > *Git Commit* creates a commit, which is like a snapshot of your repository. These commits are snapshots of your entire repository at specific times. You should make new commits often, based around logical units of change. 
 >
 >Over time, commits should tell a story of the history of your repository and how it came to be the way that it currently is. Commits include lots of metadata in addition to the contents and message, like the author, timestamp, and more. 
 >
->To commit our chnages we will use
+>To commit your changes run
 >
 >```powershell
 >git commit -m yourmessage
 >```
->here *-m* shows the message showing what we have commited.
+>here *-m* shows the message representing what we have commited.
 >When we commit, we should always include a message.
 >By adding clear messages to each commit, it is easy for yourself (and others) to see what has changed and when.
 
@@ -176,7 +178,7 @@ Azure DevOps is a Software as a service (SaaS) platform from Microsoft that prov
 >git push --all
 >```
 >:arrow_right: Now if you goto your Azure DevOps portal you will see that all your changes are pushed into server successfully.
->And you can see our newly created index.html file in remote branch *(new-branch)* in Azure Devops repository.
+>And you can see our newly created *index.html* file in remote branch *(Development)* in Azure Devops repository.
 >
 > ![](images/41.png)
  -------------------------------
@@ -197,7 +199,7 @@ Azure DevOps is a Software as a service (SaaS) platform from Microsoft that prov
  > git config --golbal user.email "your email id"
  >```
  >
- >After configuring you can run first command again to see if it is configured or not.
+ >After configration you can run first command again to see if it is successfully configured or not.
 ----------------------------
  >### **STEP 9: Pull from repository**
  >The git pull command is used to fetch and download content from a remote repository and immediately update the local repository to match that content. Merging remote upstream changes into your local repository is a common task in Git-based collaboration work flows.

@@ -9,7 +9,7 @@ Azure DevOps is a Software as a service (SaaS) platform from Microsoft that prov
 > ### **STEP 1: CREATING AZURE DEVOPS ACCOUNT**
 > 
 > - Signup at Azure Devops from https://dev.azure.com/
-> - Select **START FREE** to login from your existing Microsoft Account OR  **Start free with GitHub** to login from existing github account
+> - You can login from your existing **Microsoft** Account OR  login from existing **github account** <i class='fab fa-markdown'>fa-github</i>
 >
 --------------------
 > ### **STEP 2: SETTING-UP AN ORGANIZATION** 

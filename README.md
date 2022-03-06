@@ -9,7 +9,7 @@ Azure DevOps is a Software as a service (SaaS) platform from Microsoft that prov
 > ### **STEP 1: CREATING AZURE DEVOPS ACCOUNT**
 > 
 > - Signup at Azure Devops from https://dev.azure.com/
-> - You can login from your existing **Microsoft** Account OR  login from existing **github account** <i class='fab fa-markdown'>fa-github</i>
+> - You can login from your existing **Microsoft** Account OR  login from existing **Github** account
 >
 --------------------
 > ### **STEP 2: SETTING-UP AN ORGANIZATION** 
@@ -19,22 +19,18 @@ Azure DevOps is a Software as a service (SaaS) platform from Microsoft that prov
 >Organization is logical grouping of related projects, and help to scale up your enterprise.
 >
 >
-> -> There are 2 ways of creating an organization in Azure DevOps
+> :arrow_right: There are 2 ways of creating an organization in Azure DevOps
 >  
 > 1. While signing-up you will be asked to create new organization
 > ![](images/31.png)
 >
 >  OR
 >
-> 1. If you already have organization, Sign into [Azure DevOps](https://dev.azure.com/)
+> 1. If you already have organization, select **New Organization**
+> ![](images/32.png)
 >
-> 2. Select **New Organization**
-> 
->![](images/32.png)
->
-> 3. Confirm information/name of your organization, and thn select **Countinue**
->
-> ![](images/4.png)
+> 2. Confirm information/name of your organization, and select **Countinue**
+>![](images/4.png)
 >
 >Congratulations, you're an organization owner!
 >Sign in to your organization at any time, https://dev.azure.com/{yourorganization}
@@ -50,18 +46,17 @@ Azure DevOps is a Software as a service (SaaS) platform from Microsoft that prov
 >
 >A project provides a repository for source code and a place for users to plan, track progress, and collaborate on building software solutions. A project represents a fundamental container where data is stored when added to Azure DevOps.
 >
-> -> We are making project for a bank (*BBBank*)
+> :arrow_right: We are making project for a bank (*BBBank*)
 >
->  1. Give a logical name to your project and click **Create Project** 
->
-> ![](images/5.png)
+>  1. Give a name to your project and click **Create Project** 
+>![](images/5.png)
 >
 ------------------
 >
 > ### **STEP 4: CREATING REPOSITORIES IN A PROJECT**
 >Azure Repos is a set of version control tools that you can use to manage your code.
 >
->  -> In this project we will 2 repositories
+>  :arrow_right: In this project we will 2 repositories
 > 
 > - One for UI
 > - One for API Code
@@ -75,9 +70,9 @@ Azure DevOps is a Software as a service (SaaS) platform from Microsoft that prov
 > 
 > ![](images/34.png)
 >
-> -> WE HAVE SUCCESSFULLY CREATED A PROJECT ENVIORNMENT!
+> :arrow_right: WE HAVE SUCCESSFULLY CREATED A PROJECT ENVIORNMENT!
 >
-> -> NOW WE WILL MOVE ON TO SECOND PART OF OUR LAB
+> :arrow_right: NOW WE WILL MOVE ON TO SECOND PART OF OUR LAB
 --------------------------------------
 -------------------------------------
 
@@ -91,7 +86,7 @@ Azure DevOps is a Software as a service (SaaS) platform from Microsoft that prov
 -----------------
 > ### **STEP 2: Cloning Git repository in from CLI**
 >
-> 1. First we will create folder in local computer for the project
+> 1. First we will create folder for the project
 > 2. We will create another sub-folder for UI project (*BBBank_UI*)
 > ![](images/35.png)
 >
@@ -104,19 +99,20 @@ Azure DevOps is a Software as a service (SaaS) platform from Microsoft that prov
 >5. Add copied URL after **git clone** and Run this command in the terminal
 >
 > ```bash
-> git clone https://Patters-Tech@dev.azure.com/Patters-Tech/BBBank/_git/BBBank_UI
+> git clone <Paste your cloned URL>
 >  ```
 ------------
 > ### **STEP 3: Create a Local branch**
 >
 > Branches allow you to develop features, fix bugs, or safely experiment with new ideas in a contained area of your repository. It is good practice to create a branch and start working on it rather than making changes to Main branch.
 >
-> -> To create a local branch run this command in Code Editor terminal
+> :arrow_right: To create a local branch run this command in Code Editor terminal
 >
 >```powershell
-> git checkout -b ＜new-branch＞
+> git checkout -b ＜your branch name＞
 >```
-> -> New branch is successfully created 
+> :arrow_right: New branch is successfully created 
+>
 >![](images/38.png)
 
 ----------------
@@ -126,22 +122,22 @@ Azure DevOps is a Software as a service (SaaS) platform from Microsoft that prov
 >1. Right click and create file with the name *index.html*
 >![](images/39.png)
 >
->2. Now we will create a sample page by putting this HTML code.
+>2. Now we will create a sample page by using this HTML code.
 >```html
 ><h1>This is my first page</h1>
 >```
->.
+>3. Save the file and you can see *index.html* file in folder where you created the repository.
 ----------------------
 
 > ### **STEP 5: Staging Changes** 
->To stage a file is simply to prepare it finely for a commit. Git, with its index allows you to commit only certain parts of the changes you've done since the last commit.
+>To stage a file is simply to prepare it finally for a commit. Git, with its index allows you to commit only certain parts of the changes you've done since the last commit.
 >
-> -> Run this command in terminal to stage all changes
+> :arrow_right: Run this command in terminal to *Stage all Changes*
 >
 > ```powershell
 > git add .
 >```
->.
+>This will stage all your changes.
 ----------------
 >### **STEP 6: Check the Git Status**
 > To check the status we will use this command
@@ -152,29 +148,35 @@ Azure DevOps is a Software as a service (SaaS) platform from Microsoft that prov
 > The current status of our folder is showing that changes are **Stagged** but not **Commited** yet
 >
 >![](images/40.png)
+>
+> You can see that new file is added but not commited yet.
 -------------------
 >### **STEP 7: Commiting Changes**
-> A commit, or "revision", is an individual change to a file (or set of files). 
+> *Git Commit* creates a commit, which is like a snapshot of your repository. These commits are snapshots of your entire repository at specific times. You should make new commits often, based around logical units of change. 
+>
+>Over time, commits should tell a story of the history of your repository and how it came to be the way that it currently is. Commits include lots of metadata in addition to the contents and message, like the author, timestamp, and more. 
 >
 >To commit our chnages we will use
 >
 >```powershell
->git commit -m firstcommit
+>git commit -m yourmessage
 >```
->here *-m* shows the message showing what we have commited
+>here *-m* shows the message showing what we have commited.
+>When we commit, we should always include a message.
+>By adding clear messages to each commit, it is easy for yourself (and others) to see what has changed and when.
 
 ------------------------------
 >### **STEP 8: Pushing Changes to Server**
 >
->The git push command allows you to send (or push) the commits from your local branch in your local Git repository to the remote repository.
+>The git push command allows you to send (or push) the commits from your branch in your local Git repository to the remote repository.
 >
 >To push to local server we use this command in terminal
 >
 >```powershell
 >git push --all
 >```
->-> Now if you goto your Azure DevOps portal you will see that all your changes are pushed into server successfully.
->And you can see our newly created index.html file in local branch *(new-branch)* in Azure Devops repository.
+>:arrow_right: Now if you goto your Azure DevOps portal you will see that all your changes are pushed into server successfully.
+>And you can see our newly created index.html file in remote branch *(new-branch)* in Azure Devops repository.
 >
 > ![](images/41.png)
  -------------------------------
@@ -183,33 +185,33 @@ Azure DevOps is a Software as a service (SaaS) platform from Microsoft that prov
  > Those who have recently installed git may face some unforeseen error.
  > Possible cause of it is that your **username** and **email-id** is not configured in git. 
  >
- > If you face this error use commands below
- > 
+ > If you face error while pushing, follow these steps
+ >
+ >First check the configuration by running this command
+ >```powershell
+ >git config --golbal --list
+ >```
+ >Now configure username and email id
  >```powershell
  > git config --global user.name "username"
  > git config --golbal user.email "your email id"
  >```
- >To check the configuration run
  >
- >```powershell
- >git config --golbal --list
- >```
- >.
+ >After configuring you can run first command again to see if it is configured or not.
 ----------------------------
  >### **STEP 9: Pull from repository**
- >Pull requests let you tell others about changes you've pushed to a branch in a repository on GitHub. Once a pull request is opened, you can discuss and review the potential changes with collaborators and add follow-up commits before your changes are merged into the base branch.
+ >The git pull command is used to fetch and download content from a remote repository and immediately update the local repository to match that content. Merging remote upstream changes into your local repository is a common task in Git-based collaboration work flows.
  >
  >To pull from the repository in which changes have been made, run this command
  >
  >```powershell
  >git pull --all
  >```
- >.
+ >
 
 ----------------------
 ------------------------
-Read more about [git commads](https://git-scm.com/docs)
+:arrow_right: Read more about [git commads](https://git-scm.com/docs)
 
 
-
-If you want to start using [Visual Studio Blog](https://devblogs.microsoft.com/visualstudio/)
+:arrow_right: If you want to start using [Visual Studio Blog](https://devblogs.microsoft.com/visualstudio/)

@@ -73,11 +73,11 @@ Azure DevOps is a **Software as a service (SaaS)** platform from Microsoft that 
 > 
 -------------------------------------
 
-## **2) Interacting with repositories **
+## 2) Interacting with repositories
 
  ### **What is a Git?**
 
-GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere
+GitHub is a code hosting platform for version control and collaboration. It lets us work together on projects from anywhere
 
 :arrow_right: Follow below steps to clone git repositories. 
 
@@ -100,7 +100,7 @@ GitHub is a code hosting platform for version control and collaboration. It lets
 > 
 >![](images/37.png)
 >
->5. Use the following command to clone the repository. 
+>5. Use the following command to clone the repository. You may need to give credentials while running the given command 
 >
 > ```bash
 > git clone <Paste the URL here>
@@ -112,7 +112,7 @@ GitHub is a code hosting platform for version control and collaboration. It lets
 >
 > A branch is a **unique set of code changes** with a unique name. Each repository can have one or more branches. The main branch — the one where all **changes eventually get merged** back into, and is called master. Branches allow us to develop features, fix bugs, and we can safely experiment with new ideas in a contained area of your repository. 
 >
-> :arrow_right: Use the following command in the CLI to create a your branch
+> :arrow_right: Go inside the cloned repository and open command line by right-clicking the folder. Use the following command in the CLI to create a your branch. 
 >
 >```powershell
 > git checkout -b ＜your branch name＞
@@ -221,5 +221,5 @@ In version control systems, a commit is an operation which s**ends the latest ch
 ## **Suggestions**
 ------------------------
 :arrow_right: Read more about [git commads](https://git-scm.com/docs)
-:arrow_right: Read more about [Azure DevOps]((https://docs.microsoft.com/en-us/azure/devops/user-guide/what-is-azure-devops?view=azure-devops))
+:arrow_right: Read more about [Azure DevOps](https://docs.microsoft.com/en-us/azure/devops/user-guide/what-is-azure-devops?view=azure-devops)
 :arrow_right: Read more about [Visual Studio](https://devblogs.microsoft.com/visualstudio/)

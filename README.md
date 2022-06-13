@@ -1,12 +1,12 @@
-# **Azure DevOps Project Environment and its Repositories**
+# **Azure DevOps Project Environment and interacting with its Repositories**
 
 ## **What is Azure Devops?** 
 
-Azure DevOps is a **Software as a service (SaaS)** platform from Microsoft that provides an end-to-end DevOps toolchain for developing and deploying softwares.  It also integrates with most leading tools on the market and is a great option for orchestrating a DevOps toolchain. [Visit Official Site](https://docs.microsoft.com/en-us/azure/devops/user-guide/what-is-azure-devops?view=azure-devops)
+Azure DevOps is a **Software as a service (SaaS)** platform from Microsoft that provides an end-to-end DevOps toolchain for developing and deploying softwares.  It also integrates with most leading tools on the market and is a great option for orchestrating a DevOps toolchain. [Read more](https://docs.microsoft.com/en-us/azure/devops/user-guide/what-is-azure-devops?view=azure-devops)
 
 ## **Azure DevOps Project Environment Setup** 
 
-> ### **Step 1: CREATING AZURE DEVOPS ACCOUNT**
+> ### **Step 1: Creating Azure DevOps Account**
 > 
 > - Signup at Azure Devops from https://dev.azure.com/
 > - You can login from your existing **Microsoft** or **Github** account
@@ -17,9 +17,7 @@ Azure DevOps is a **Software as a service (SaaS)** platform from Microsoft that 
 >#### **What is an Organization?**
 >
 >An **Organization** in Azure DevOps is a mechanism for organizing and connecting groups of related projects
->
 >We can create an organization while sign-up or create mutiple organizations after the sign-up
-
 >  
 >:arrow_right: **While Signing-Up**
 
@@ -35,18 +33,19 @@ Azure DevOps is a **Software as a service (SaaS)** platform from Microsoft that 
 > 
 >![](images/4.png)
 >
->*Congratulations!, organization is created successfully.* 
+>*Congratulations! Organization is created successfully.* 
+>
 >Click [here](https://dev.azure.com/) to sign-in to an organization
 
 -------------------------
 
-> ## **Step 3: CREATING PROJECT IN AN ORGANIZATION**
+> ## **Step 3: Creating Project in an organization**
 >
 >### **What is a Project in an Azure Organization?**
 >
->Azure DevOps Project helps you ***launch an application*** on an Azure App Service of your choice in a few quick steps and set you up with everything you need for ***developing, deploying, and to monitoring*** your application
+>Azure DevOps Project helps you ***launch an application*** on an Azure App Service of your choice in a few quick steps and set you up with everything you need for ***developing, deploying*** and to ***monitoring*** your application
 >
-> Lets create a sample project for a bank 
+> Lets create a sample project for our bank application named as **BBBank** 
 >
 >  1. Enter a name, description and select visiblity to your project and click **Create Project** 
 > 
@@ -69,7 +68,7 @@ Azure DevOps is a **Software as a service (SaaS)** platform from Microsoft that 
 > 
 > ![](images/34.png)
 >
-> :arrow_right: Project environment is created successfully!
+> :arrow_right: Project environment is created successfully! We can **create a repository for our backend-code** using the same step as above 
 > 
 -------------------------------------
 
@@ -123,7 +122,7 @@ GitHub is a code hosting platform for version control and collaboration. It lets
 ----------------
 
 > ### **Step 4: Create a simple HTML Page**
-> 1. Open Visual Studio Code and** create HTML file** by file clicking on the 'File' and **selecting 'New File'** option and name it *index.html*
+> 1. Open Visual Studio Code and **create HTML file** by file clicking on the **File** and selecting **New File** option and name it ***index.html***
 > 
 >![](images/39.png)
 >
@@ -132,7 +131,7 @@ GitHub is a code hosting platform for version control and collaboration. It lets
 >```html
 ><h1>This is my first page</h1>
 >```
->3. Save the file and you can see *index.html* file in folder where you created the repository.
+>3. Save the file and you can see ***index.html*** file in folder where you created the repository.
 
 >![](images/43.png)
 
@@ -160,7 +159,6 @@ GitHub is a code hosting platform for version control and collaboration. It lets
 >
 -------------------
 >### **Step 7: Commiting Changes**
-
 > 
 In version control systems, a commit is an operation which s**ends the latest changes of the source code to the repository**. Commits are snapshots of your entire repository at specific time. You should make new commits often, based around logical units of change. 
 >
@@ -169,7 +167,7 @@ In version control systems, a commit is an operation which s**ends the latest ch
 >:arrow_right: Run the following command to commit your changes
 >
 >```powershell
->git commit -m yourmessage
+>git commit -m <yourmessage>
 >```
 >here *-m* represents the message about the code that we have commited. It is easy for us to see what changings has been made in the commit.
 
@@ -201,8 +199,8 @@ In version control systems, a commit is an operation which s**ends the latest ch
  >Run the following command **if you don't have the configuration set** for your username and email 
 
  >```powershell
- > git config --global user.name "username"
- > git config --global user.email "your email"
+ > git config --global user.name <username>
+ > git config --global user.email <your email>
  >```
  >
  >**Test the configurtion** by followng the process from step 1, once the above command succeeds
@@ -218,8 +216,12 @@ In version control systems, a commit is an operation which s**ends the latest ch
  >git pull --all
  >```
 
-## **Suggestions**
+## **Conclusion**
 ------------------------
-:arrow_right: Read more about [git commads](https://git-scm.com/docs)
-:arrow_right: Read more about [Azure DevOps](https://docs.microsoft.com/en-us/azure/devops/user-guide/what-is-azure-devops?view=azure-devops)
-:arrow_right: Read more about [Visual Studio](https://devblogs.microsoft.com/visualstudio/)
+We have setup the Azure DevOps enviroment and interacted with Azure Git repositories by created a sample respository, projects and brnches so far.
+
+>:arrow_right: Read more about [git commads](https://git-scm.com/docs)
+
+>:arrow_right: Read more about [Azure DevOps](https://docs.microsoft.com/en-us/azure/devops/user-guide/what-is-azure-devops?view=azure-devops)
+
+>:arrow_right: Read more about [Visual Studio](https://devblogs.microsoft.com/visualstudio/)

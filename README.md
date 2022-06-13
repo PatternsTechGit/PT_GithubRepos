@@ -1,4 +1,4 @@
-# **Azure DevOps Project Environment and interacting with its Repositories**
+# **Azure DevOps Project Environment and Interacting with its Repositories**
 
 ## **What is Azure Devops?** 
 
@@ -218,7 +218,7 @@ In version control systems, a commit is an operation which s**ends the latest ch
 
 ## **Conclusion**
 ------------------------
-We have setup the Azure DevOps enviroment and interacted with Azure Git repositories by created a sample respository, projects and brnches so far.
+We have setup the Azure DevOps enviroment and interacted with Azure Git repositories by created a sample respository, projects and branches.
 
 >:arrow_right: Read more about [git commads](https://git-scm.com/docs)
 
